@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+/*Reset start*/
+*{
+    color: #222328;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+/*Reset end*/
+
+/*Guide Line (안내 테두리선)*/
+/*
+div#wrap          {border: 1px solid #000;}
+header#header {border: 1px solid #000;}
+div#logo           {border: 1px solid #000;}
+div#slideShow  {border: 1px solid #f00;}
+aside#aside      {border: 1px solid #000;}
+footer#footer    {border: 1px solid #000;}
+*/
+/*Guide Line (안내 테두리선)*/
+
+/*div#wrap start*/
+div#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+/*div#wrap end*/
+
+/*header#header start*/
+header#header {
+    /*width: 100%; 블록레벨요소라서 자동으로 100% 설정됨으로 안써도 됨*/
+    height: 100px;
+    display: flex;
+}
+
+/*div#logo start*/
+div#logo {
+    width: 240px; /*실제크기보다 여유롭게*/
+    text-align: center;
+    padding-top: 24px;
+}
+
+/*div#logo end*/
+
+/*nav#gnb start*/
+nav#gnb {
+    width: 900px;
+    padding-top: 26px;
+}
+#gnb>ul{
+    width:562px;
+    border: 1px solid #bbb;
+    margin-left: 330px;
+}
+#gnb>ul::after {
+    /*밑에 선이 안보이니까*/
+    content: "";
+    display: block;
+    height: 38px;
+}
+#gnb>ul>li {
+    float: left;
+}
+#gnb>ul>li>a {
+    width: 140px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    padding: 6px 16px;
+    display: inline-block;
+}
+#gnb>ul>li>a:hover {
+    background-color: #c8e9fd;
+}
+/*nav#gnb end*/
+
+/*header#header end*/
+
+/*main#main start*/
+main#main {
+/*높이 설정 불필요 why? 자식요소들 높이 지정됨*/
+
+}
+/*div#slideShow start*/
+div#slideShow {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#slideShow #promotionTxt {
+    width: 320px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2em;
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-82%)
+    /*조절 translate로 하기*/
+}
+/*div#slideShow end*/
+
+/*aside#aside start*/
+aside#aside {
+    height: 200px;
+    display: flex;
+}
+
+
+/*멀티탭 BBS 시작*/
+#aside div#bbs {
+    width: 450px;
+    position: relative;
+}
+#aside>#bbs div#tabArea {
+    width: 400px;
+    padding: 0px 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+#aside>#bbs button {
+    font-size: 19px;
+    font-weight: bold;
+    padding: 2px 10px;
+    position: relative;
+    left: 30px;
+    top: 1px; /*연결된 것처럼 보임*/
+    border: 1px solid #bbb;
+    border-bottom: none;
+    outline: none;
+    background-color: #eee;
+}
+#aside>#bbs button:nth-child(2) {
+    border: none;
+    left: 25px;
+    top: 0px;
+}
+#aside>#bbs div#tabContents1 {
+    padding-left: 10px;
+    border: 1px solid #bbb;
+}
+#aside>#bbs table td:first-child {
+    width: 240px;
+    padding: 4px;
+}
+#aside>#bbs table td:last-child {
+    width: 120px;
+}
+/*멀티탭 BBS 끝*/
+
+/*갤러리게시판 시작*/
+#aside>#bbs div#tabContents2 {
+    text-align: center;
+    padding: 4px 0;
+    border: 1px solid #aaa;
+
+    display: none;
+}
+#aside>#bbs div#tabContents2 img {
+    vertical-align: middle;
+}
+/*갤러리게시판 끝*/
+
+#aside>div#banner,
+#aside>div#shortcut {
+    width: 375px;
+    position: relative;
+}
+#banner>img,
+#shortcut>img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+#banner>img {
+    transform:translate(-50%, -70%)
+}
+/*aside#aside end*/
+
+/*main#main end*/
+
+/*footer#footer start*/
+footer#footer {
+    height: 100px;
+    display: flex;
+}
+#footer>div#footerLogo {
+    width: 300px;
+    padding-top: 20px;
+}
+#footer>div#companyInfo {
+    width: 700px;
+}
+#footer>div#companyInfo li {
+    margin-right: 20px;
+    float: left;
+}
+#footer>#componyInfo li>a {
+    font-size: 15px;
+}
+#footer #footerLNB+div {
+    font-size: 15px;
+    clear: both;
+}
+#footer  div#footerLNB {
+    clear: both;
+}
+#footer  div#footerLNB {
+    margin-bottom: 30px;
+}
+#footer>div#snsLink {
+    width: 210px;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+/*footer#footer end*/
